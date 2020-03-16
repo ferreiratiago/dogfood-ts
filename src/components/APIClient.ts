@@ -12,7 +12,7 @@ export default class APIClient {
         };
     }
 
-    async get(url: string) {
+    async getRequest(url: string) {
         const response = await fetch(`${this.baseUrl}/${url}`, {
             method: 'GET',
             headers: this.baseHeaders,

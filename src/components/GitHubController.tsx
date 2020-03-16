@@ -14,7 +14,7 @@ export default function GitHubController({ children }: { children: ReactNode }) 
     useEffect(
         () => {
             (async () => {
-                const repos = await gitHubClient.get('users/ferreiratiago/repos') as Repository[];
+                const repos = await gitHubClient.getRequest('users/ferreiratiago/repos') as Repository[];
                 setRepoWithMostForks(repos[0]);
                 setRepoWithMostStars(repos[0]);
                 setAllRepos(repos);
